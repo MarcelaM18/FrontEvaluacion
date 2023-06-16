@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                
+
+</head>
+<body>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="direccion" type="text" class="validate" placeholder="Direccion">
+                  <label for="direccion">Direccion</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="latitud" type="longitud" class="validate" placeholder="Latitud" type="text">
+                  <label for="latitud">Latitud</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="longitud" type="text" class="validate" placeholder="Longitud">
+                  <label for="longitud">Longitud</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="descripcion" type="text" class="validate" placeholder="Longitud">
+                  <label for="descripcion">Descripcion</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="fecha" type="text" class="validate" placeholder="Fecha">
+                  <label for="fecha">Fecha</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                    <button id="btnActualizar" class="btn waves-effect waves-light" type="button" name="action">Actualizar
+                        <i class="material-icons right">send</i>
+                      </button>
+                </div>
+              </div>              
+            </form>
+          </div>
+    </div>  
+
+        </div>   
+  </div>
+
+    <!-- Modal Trigger -->
+    <button data-target="modal1" class="btn modal-trigger">Modal</button>
+       
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+    </script>
+</body>
+</html>

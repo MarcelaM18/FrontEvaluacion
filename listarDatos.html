@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   
+    <title>Document</title>
+</head>
+<body onload="listarDatos()">
+    <div class="container">
+        <div>
+            <a class="btn waves-effect waves-light" href="/registrarUsuario.html">Registrar
+                <i class="material-icons right">send</i>
+            </a>
+        </div>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>
+                       Direccion
+                    </th>
+                    <th>
+                        Latitud
+                    </th>
+                    <th>
+                      Longitud
+                  </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                      Fecha
+                  </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="contenido">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+        
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <a class="btn waves-effect waves-light" href="/editarUsuario.html">Editar
+                            <i class="material-icons right">send</i>
+                        </a>
+                    </div>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="direccion" type="text" class="validate" placeholder="Direccion">
+                                <label for="direccion">Direccion</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="latitud" type="longitud" class="validate" placeholder="Latitud" type="text">
+                                <label for="latitud">Latitud</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="longitud" type="text" class="validate" placeholder="Longitud">
+                                <label for="longitud">Longitud</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="descripcion" type="text" class="validate" placeholder="Longitud">
+                                <label for="descripcion">Descripcion</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="fecha" type="text" class="validate" placeholder="Fecha">
+                                <label for="fecha">Fecha</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <button id="btnActualizar" class="btn waves-effect waves-light" type="button" name="action">Actualizar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>              
+                    </form>
+                </div>
+            </div>  
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/funciones.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+        });
+
+        // Or with jQuery
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+    </script> 
+</body>
+</html>
